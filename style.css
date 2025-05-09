@@ -94,6 +94,41 @@ body {
   transition: var(--transition-default);
 }
 
+/* Адаптивный баннер */
+.banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.banner svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Текст в SVG: основной размер */
+.banner svg text {
+  font-size: 48px; /* базовый размер */
+  fill: #ffffff;
+}
+
+/* Круги и анимации остаются без изменений */
+
+/* Планшеты и небольшие экраны */
+@media (max-width: 768px) {
+  .banner svg text {
+    font-size: 32px !important;
+  }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 480px) {
+  .banner svg text {
+    font-size: 24px !important;
+  }
+}
+
 /* Шапка */
 .header {
   padding: 2rem 1rem;
@@ -474,6 +509,23 @@ button:active {
 .currency-card:nth-child(2) { animation-delay: 0.2s; }
 .currency-card:nth-child(3) { animation-delay: 0.3s; }
 .currency-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Адаптивность кнопки темы */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.25rem; /* чуть меньше текста */
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;    /* ещё компактнее */
+  }
+}
 
 /* CTA кнопка */
 .cta-button {
